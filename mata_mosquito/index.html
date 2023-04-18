@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+		<link rel="stylesheet" href="estilo.css" /> <!--Link com a pagina de estilo css-->
+
+<!--######################################################################
+			COMENTAR ESSA PARTE
+##########################################################################-->
+
+		<!--Função para iniciar o jogo-->
+		<script> 
+			function iniciarJogo() { //função de iniciar o jogo
+				var nivel = document.getElementById('nivel').value //a variavel nivel recebe um valor do nivel que e passado atraves do id nivel
+				//na parte inferior dessa propria pagina
+
+				if(nivel === '') { //se o nivel não receber nenhum valor a pagina vai mostrar um alerta ao usuario
+					alert('Selecione um nível para iniciar o jogo')
+					return false
+				}
+
+				window.location.href = "app.html?" + nivel //busca a janela (pagina app.html) e passando o nivel selecionado
+
+			}
+		</script>
+
+<!--########################################################################-->
+
+
+	</head>
+	<body>
+
+		<div class="container"> <!--inicio container principalLocal do jogo (janela)-->
+			<div class="row"> <!--1 linha dentro do container principal ambiente do jogo-->
+				<div class="col"> <!--coluna unica dentro da 1 linh-->
+					<div class="d-flex justify-content-center"> <!--alinhamento a imagem no centro-->
+						<center><img id="get" src="imagens/logo.png" /></center> <!--imagem do inicio do game-->
+					</div>
+				</div>
+			</div>
+
+			<div class="row"> <!--2 linha dentro do container principal-->
+				<div class="col"> <!--coluna dentro da segunda linha-->
+					<div class="d-flex justify-content-center"> <!--alinhamento do menu de seleção de nivel -->
+
+<!--###############################################################################
+				COMENTAR AQUI
+###################################################################################-->
+						<div class="mb-2">
+							<select class="form-control" id="nivel"> <!--menu de seleção de nivel-->
+								<option value="">-- Selecione o nível --< <!--descrição da ação do usuario-->
+								<option value="facil">fácil</option>
+								<option value="normal">normal</option>
+								<option value="dificil">Difícil</option>
+								<option value="deuses">Mortal</option>
+							</select>
+						</div>
+
+
+<!--################################################################################-->
+					</div>
+				</div>
+			</div>
+
+
+			<div class="row"> <!--3 linha dentro do container principal-->
+				<div class="col"> <!--coluna dentro da 3 linha-->
+					<div class="d-flex justify-content-center"> <!--alinhar o botão no centro-->
+
+						<!--botão iniciar jogo-->
+						<button type="button" class="btn btn-danger btn-lg" onclick="iniciarJogo()" >Iniciar Jogo</button> 
+					</div>
+				</div>
+			</div>
+		</div> <!--fim do container principal-->
+
+	</body>
+</html>

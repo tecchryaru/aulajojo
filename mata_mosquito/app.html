@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="estilo.css" />
+		<script src="jogo.js"></script>
+	</head>
+	<body onresize="ajustaTamanhoPalcoJogo()"> <!--evento e disparado quando a janela e redimensionada -->
+
+<!--####################################################################
+			COMENTAR ESSA PARTE
+#####################################################################-->
+
+		<div class="painel"> <!--aplicação da classe no css-->
+			<div class="vidas"> 
+				<img id="v1" src="imagens/coracao_cheio.png" />
+				<img id="v2" src="imagens/coracao_cheio.png" />
+				<img id="v3" src="imagens/coracao_cheio.png" />
+				<img id="v4" src="imagens/coracao_cheio.png" />
+				<img id="v5" src="imagens/coracao_cheio.png" />
+				
+			</div>
+
+<!--####################################################################-->
+
+			<div class="cronometro">Tempo restante: <span id="cronometro"></span></div> <!--elemento cronometro id-cronometro -->
+		</div>
+
+		<script>
+			document.getElementById('cronometro').innerHTML = tempo //seleciona objeto com id=cronometro interno no html.
+
+			var criaMosca = setInterval(function() { //cria mosquito em posições alternadas no intervalo de tempo
+				posicaoRandomica()
+			}, criaMosquitoTempo)
+		</script>
+	</body>
+</html>

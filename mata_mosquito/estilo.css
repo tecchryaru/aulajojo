@@ -1,0 +1,63 @@
+html {
+	cursor: url(imagens/laser.jpg) 40 30, auto; /* cursor do mouse tranforma em mata_mosquito*/
+}
+
+body { /* corpo do site */
+	background-image: url(imagens/fundo.gif); /* imagem do fundo */
+	background-repeat: no-repeat; /* nao repetir a imagem do fundo */
+	background-size: 100%; /* tamanho da imagem tela inteira */
+}
+
+/* na pagina do jogo na area do switch de acordo com a classe o mosquito muda de tamanho*/
+.mosquito1 {
+	width: 50px;
+	height: 50px;
+}
+
+.mosquito2 {
+	width: 70px;
+	height: 70px;
+}
+
+.mosquito3 {
+	width: 150px;
+	height: 150px;
+}
+img#get{
+	height: 500px;
+	width: 550px;
+}
+
+/* na area do jogo o mosquito muda de lado (vira para direita ou esquerda)*/
+.ladoA {
+	transform: scaleX(1); /* posição original */
+}
+
+.ladoB {
+	transform: scaleX(-1); /* posição oposta */
+}
+
+.painel {
+	position: absolute;
+	width: 190px;
+	padding: 10px;
+	left: 0px;
+	bottom: 0px;
+	border-top:solid 1px #fff;
+	background-color: pink;
+	opacity: 0.7
+}
+
+.vidas {
+	float: left;
+	background-color: pink;
+}
+
+.cronometro {
+	float: left;
+	font-size: 20px;
+	font-weight: bold;
+}
+.nivel{
+	background-color: pink;
+}
